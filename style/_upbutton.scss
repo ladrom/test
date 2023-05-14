@@ -1,0 +1,30 @@
+.up-button {
+  display: none;
+  
+  @include onDesktop {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    background-color: $font-color-primary;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

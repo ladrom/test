@@ -1,0 +1,15 @@
+.header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  background-color: #fff;
+  overflow: hidden;
+  
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+  }
+}

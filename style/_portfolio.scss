@@ -1,0 +1,95 @@
+.portfolio {
+  padding-bottom: 3rem;
+
+  &__list {
+    margin: 1rem 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include onDesktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__link {
+    border: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    opacity: 0.5;
+    text-decoration: none;
+    background-color: $bg-secondary-color;
+    text-align: center;
+    color: $font-color-primary;
+
+    &--activ {
+      color: #fff;
+      background-color: #51545d;
+      opacity: 1;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+
+    &::after {
+      content: '+';
+      font-size: 5rem;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: 0.3s;
+    }
+
+    &:hover::after {
+      height: 100%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 5/3;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__description {
+    background-color: #fff;
+    padding: 1rem;
+
+    &_header {
+      text-transform: uppercase;
+      font-size: $fz-mobile;
+    }
+
+    &_tag {
+      text-transform: uppercase;
+      font-size: 0.65rem;
+      opacity: 0.6;
+    }
+  }
+}

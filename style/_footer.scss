@@ -1,0 +1,25 @@
+.footer {
+  background-color: $font-color-primary;
+  color: #fff;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+
+  @include onDesktop {
+    font-size: $fz-desktop;
+  }
+}

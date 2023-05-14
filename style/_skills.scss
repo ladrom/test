@@ -1,0 +1,44 @@
+.skills {
+  background-color: #fff;
+
+  &__wrapper {
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  &__header {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    background-color: $bg-color;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    border-left: 3px solid $font-color-primary;
+  }
+
+  &__name {
+    font-size: 1rem;
+  }
+
+  &__progressbar {
+    background-color: $bg-color;
+    margin-bottom: 0.75rem;
+    
+  }
+
+  &__bar {
+    padding: 1rem;
+    background-color: #51545d;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}

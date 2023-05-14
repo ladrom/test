@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+
+  & > * {
+    padding: 0.5rem;
+  }
+
+  &__text {
+    resize: none;
+    font-family: $ff;
+
+    &::placeholder {
+      font-family: $ff;
+    }
+  }
+
+  &__button {
+    width: 10rem;
+    color: #fff;
+    background-color: $font-color-primary;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+}

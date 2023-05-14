@@ -1,0 +1,63 @@
+.hero {
+  background-color: #51545d;
+  color: #fff;
+
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0.5rem;
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+
+    @include onDesktop {
+      align-items: start;
+      gap: 1rem;
+      text-align: start;
+    }
+  }
+
+  &__profession {
+    text-transform: uppercase;
+    
+    @include onDesktop {
+      font-size: $fz-desktop * 2;
+    }
+  }
+
+  &__title {
+
+    @include onDesktop {
+      font-size: $fz-desktop * 4;
+      font-weight: bold;
+    }
+  }
+
+  &__logo {
+    width: 300px;
+    order: 1;
+
+    @include onDesktop {
+      width: 500px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    @include onDesktop {
+      border-radius: 50%;
+    }
+  }
+}
